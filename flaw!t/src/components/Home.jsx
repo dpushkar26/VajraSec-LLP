@@ -11,7 +11,9 @@ import Threads from './ui/Threads';
 // these are the actual files present inside public/logos
 // make sure spaces are encoded (axis bank -> axis%20bank.png)
 const companyLogos = [
+  '/logos/DSCI.svg',
   '/logos/adobe.png',
+  '/logos/artech.png',
   '/logos/american-express.png',
   '/logos/axis%20bank.png',
   '/logos/bajaj.png',
@@ -19,7 +21,15 @@ const companyLogos = [
   '/logos/ibm.png',
   '/logos/infosys.png',
   '/logos/techm.png',
-  '/logos/tenneco.png'
+  '/logos/tenneco.png',
+  '/logos/apstate.png',
+  '/logos/indianclg.png',
+  '/logos/ipclg.png',
+  '/logos/presidency.png',
+  '/logos/takshila.png',
+  '/logos/venkaclg.png',
+  '/logos/kaziranga uni.png',
+  '/logos/met.png'
 ];
 
 // Fallback component in case Threads fails to load
@@ -82,7 +92,7 @@ const Home = () => {
           {/* Company Logos Marquee with more space below */}
           <div className="mt-20 md:mt-28 w-full max-w-5xl rounded-xl border border-white/10 backdrop-blur-sm bg-white/5 px-4 py-6 shadow-lg mx-4">
             <div className="uppercase text-xs sm:text-sm font-medium text-white/70 tracking-wider mb-3 md:mb-4">
-              Trusted by industry leaders
+              Trusted by industry leaders & Academic Partners
             </div>
             <Marquee gradient={false} speed={40} pauseOnHover>
               {companyLogos.map((src, idx) => (

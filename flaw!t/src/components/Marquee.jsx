@@ -4,16 +4,26 @@ import Marquee from 'react-fast-marquee'
 
 // keep filenames here and construct safe URLs later (handles spaces / special chars)
 const companyLogos = [
+  'DSCI.svg',
   'adobe.png',
   'american-express.png',
   'axis bank.png',
   'bajaj.png',
+  '/logos/artech.png',
   
   'flipkart.png',
   'ibm.png',
   'infosys.png',
   'techm.png',
   'tenneco.png',
+  '/logos/apstate.png',
+  '/logos/indianclg.png',
+  '/logos/ipclg.png',
+  '/logos/presidency.png',
+  '/logos/takshila.png',
+  '/logos/venkaclg.png',
+  '/logos/kaziranga uni.png',
+  '/logos/met.png'
 ]
 
 const CompanyMarquee = () => {

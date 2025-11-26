@@ -86,11 +86,11 @@ const serviceCards = [
     title: "Corporate Training",
     description: "Provide versatile training at your desk.",
     features: [
-      "IAM Configuration",
-      "Encryption Strategy",
-      "Cloud Compliance",
-      "Threat Detection",
-      "Multi-Cloud Protection"
+      "All Industries Served",
+      "Customs Vendor-Based Training Solutions",
+      "Expert Instructors with Experience",
+      "Skill-based Courses Aligned with Industry Standards",
+      
     ]
   }
 ];

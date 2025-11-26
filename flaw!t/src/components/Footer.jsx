@@ -66,11 +66,11 @@ const Footer = () => {
 
         {/* Bottom Logo */}
         <div className="flex justify-center mb-6">
-          <h1 className="text-5xl font-monteserrat tracking-wide">
-            <span className="text-blue-500 font-bold">VAJRA</span>
+          <h1 className="text-4xl font-monteserrat tracking-wide">
+            <span className="text-blue-500 font-bold">Vajra</span>
             <span className="text-white font-boldz">Sec</span>
             
-            <span className="text-white"> Security LLP.</span>
+            <span className="text-white"> Technologies Pvt. Ltd.</span>
           </h1>
         </div>
 
@@ -79,7 +79,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center text-sm">
-          <p>© 2025 VajraSec Security LLC. All Rights Reserved.</p>
+          <p>© 2025 VajraSec Technologies Pvt. Ltd. All Rights Reserved.</p>
           <a href="#" className="font-bold underline mt-2 md:mt-0">
             Privacy Policy
           </a>
