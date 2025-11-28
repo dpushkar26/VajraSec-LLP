@@ -2,28 +2,28 @@
 import React from 'react'
 import Marquee from 'react-fast-marquee'
 
-// keep filenames here and construct safe URLs later (handles spaces / special chars)
+// filenames present in public/logos (keep filenames only) — encoding will be handled when building src
 const companyLogos = [
   'DSCI.svg',
   'adobe.png',
   'american-express.png',
   'axis bank.png',
   'bajaj.png',
-  '/logos/artech.png',
-  
+  'artech.png',
   'flipkart.png',
   'ibm.png',
   'infosys.png',
   'techm.png',
   'tenneco.png',
-  '/logos/apstate.png',
-  '/logos/indianclg.png',
-  '/logos/ipclg.png',
-  '/logos/presidency.png',
-  '/logos/takshila.png',
-  '/logos/venkaclg.png',
-  '/logos/kaziranga uni.png',
-  '/logos/met.png'
+  'apstate.png',
+  'indianclg.png',
+  'ipclg.png',
+  'presidency.png',
+  'takshila.png',
+  'venkaclg.png',
+  'kaziranga uni.png',
+  'met.png',
+  'blogdemo.png',
 ]
 
 const CompanyMarquee = () => {
@@ -31,7 +31,7 @@ const CompanyMarquee = () => {
     <div
       style={{
         position: 'absolute',
-        bottom: 32,
+        bottom: 'clamp(10px, 3vh, 32px)',
         left: 0,
         width: '100%',
         zIndex: 2,
@@ -54,7 +54,7 @@ const CompanyMarquee = () => {
       >
         Companies that believe on us
       </span>
-      <Marquee gradient={false} speed={40}>
+      <Marquee gradient={false} speed={40} pauseOnHover>
         {companyLogos.map((fileName, idx) => {
           // create a safe URL for filenames that may contain spaces/special chars
           const src = `/logos/${encodeURIComponent(fileName)}`
@@ -67,10 +67,11 @@ const CompanyMarquee = () => {
               key={idx}
               src={src}
               alt={`${pretty} logo`}
+              title={pretty}
               loading="lazy"
               style={{
-                height: 44,
-                margin: '0 36px',
+                height: 'clamp(22px, 4.4vh, 44px)',
+                margin: '0 clamp(12px, 3vw, 28px)',
                 filter: 'brightness(0) invert(1)',
                 opacity: 0.9,
                 objectFit: 'contain',

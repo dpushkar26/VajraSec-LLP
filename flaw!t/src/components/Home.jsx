@@ -8,28 +8,28 @@ import Expertise from './Expertise';
 import Footer from './Footer';
 import Threads from './ui/Threads';
 
-// these are the actual files present inside public/logos
-// make sure spaces are encoded (axis bank -> axis%20bank.png)
+// filenames present in public/logos (we build safe URLs at render time)
 const companyLogos = [
-  '/logos/DSCI.svg',
-  '/logos/adobe.png',
-  '/logos/artech.png',
-  '/logos/american-express.png',
-  '/logos/axis%20bank.png',
-  '/logos/bajaj.png',
-  '/logos/flipkart.png',
-  '/logos/ibm.png',
-  '/logos/infosys.png',
-  '/logos/techm.png',
-  '/logos/tenneco.png',
-  '/logos/apstate.png',
-  '/logos/indianclg.png',
-  '/logos/ipclg.png',
-  '/logos/presidency.png',
-  '/logos/takshila.png',
-  '/logos/venkaclg.png',
-  '/logos/kaziranga uni.png',
-  '/logos/met.png'
+  'DSCI.svg',
+  'adobe.png',
+  'artech.png',
+  'american-express.png',
+  'axis bank.png',
+  'bajaj.png',
+  'flipkart.png',
+  'ibm.png',
+  'infosys.png',
+  'techm.png',
+  'tenneco.png',
+  'apstate.png',
+  'indianclg.png',
+  'ipclg.png',
+  'presidency.png',
+  'takshila.png',
+  'venkaclg.png',
+  'kaziranga uni.png',
+  'met.png',
+  'blogdemo.png',
 ];
 
 // Fallback component in case Threads fails to load
@@ -80,8 +80,8 @@ const Home = () => {
         <Navbar />
 
         {/* Hero Content */}
-        <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-6 text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 md:mb-8">
+        <div className="absolute inset-0 z-10 flex flex-col items-center justify-start md:justify-center px-6 text-center py-10 md:py-0">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 leading-tight">
             Protect What Matters
           </h1>
           <p className="max-w-xl text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed px-4 mt-4 md:mt-6">
@@ -96,18 +96,19 @@ const Home = () => {
             </div>
             <Marquee gradient={false} speed={40} pauseOnHover>
               {companyLogos.map((src, idx) => (
-                <div key={idx} className="flex items-center justify-center mx-4 md:mx-8 h-8 md:h-10">
+                <div key={idx} className="flex items-center justify-center mx-3 md:mx-6 h-7 md:h-10 overflow-hidden">
                   <div className="h-full flex items-center">
-                    <img
-                      src={src}
-                      alt="Company Logo"
-                      className="h-full max-w-none opacity-70 transition duration-300 ease-in-out hover:opacity-100 hover:scale-110"
-                      style={{ filter: 'brightness(0) invert(1)' }}
-                      onError={(e) => {
-                        e.target.style.display = 'none';
-                        e.target.nextSibling.style.display = 'block';
-                      }}
-                    />
+                        <img
+                          src={`/logos/${encodeURIComponent(src)}`}
+                          alt={`${src.replace(/\.[^/.]+$/, '').replace(/[-_]+/g, ' ')} logo`}
+                          loading="lazy"
+                          className="h-full max-w-[110px] md:max-w-none object-contain opacity-70 transition duration-300 ease-in-out hover:opacity-100 hover:scale-110"
+                          style={{ filter: 'brightness(0) invert(1)' }}
+                          onError={(e) => {
+                            e.target.style.display = 'none';
+                            if (e.target.nextSibling) e.target.nextSibling.style.display = 'block';
+                          }}
+                        />
                     <span
                       className="text-white text-xs font-medium hidden"
                       style={{

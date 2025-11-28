@@ -269,7 +269,7 @@ const Threads = ({
     <div 
       style={{ 
         width: '100%', 
-        height: '600px', 
+        height: 'clamp(320px, 55vh, 600px)',
         position: 'relative', 
         cursor: enableMouseInteraction ? 'none' : 'default',
         ...style 
