@@ -38,3 +38,20 @@
 body {
   font-family: 'Montserrat', sans-serif;
 }
+
+/* Global fixes for mobile view */
+*, *::before, *::after { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden; /* prevent horizontal scroll / white gutter on mobile */
+}
+
+/* Make marquee / hero containers adapt better on small screens */
+.hero-logos-wrapper { width: 100%; padding-left: 0.5rem; padding-right: 0.5rem; }
+

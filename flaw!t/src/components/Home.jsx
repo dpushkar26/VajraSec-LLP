@@ -80,7 +80,10 @@ const Home = () => {
         <Navbar />
 
         {/* Hero Content */}
-        <div className="absolute inset-0 z-10 flex flex-col items-center justify-start md:justify-center px-6 text-center py-10 md:py-0">
+        <div className="absolute inset-0 z-10 flex flex-col items-center 
+    justify-start md:justify-center 
+    px-6 text-center 
+    pt-[90px] md:pt-0">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 leading-tight">
             Protect What Matters
           </h1>
@@ -90,7 +93,7 @@ const Home = () => {
           </p>
 
           {/* Company Logos Marquee with more space below */}
-          <div className="mt-20 md:mt-28 w-full max-w-5xl rounded-xl border border-white/10 backdrop-blur-sm bg-white/5 px-4 py-6 shadow-lg mx-4">
+          <div className="mt-20 md:mt-28 w-full max-w-5xl rounded-xl border border-white/10 backdrop-blur-sm bg-white/5 px-4 py-6 shadow-lg mx-4 hero-logos-wrapper">
             <div className="uppercase text-xs sm:text-sm font-medium text-white/70 tracking-wider mb-3 md:mb-4">
               Trusted by industry leaders & Academic Partners
             </div>
