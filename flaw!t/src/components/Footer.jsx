@@ -63,13 +63,17 @@ const Footer = () => {
 
             <p className="font-medium">
               <span className="text-gray-400">Mobile:</span><br />
-              +91 98765 43210
+              8087405952
+            </p>
+            <p className="font-medium">
+              <span className="text-gray-400">Email:</span><br />
+              yogesh@vajrasectech.com 
             </p>
 
             <p className="font-medium mt-4">
               <span className="text-gray-400">Address:</span><br />
               VajraSec Technologies Pvt. Ltd.<br />
-              Wathoda, Nagpur, Maharashtra, India – 440008
+              E-05/01-A,SEC 52 NOID,Noida,Gautam Buddha Nagar,Noida,Uttar Pradesh,India,201301
             </p>
           </div>
         </div>
